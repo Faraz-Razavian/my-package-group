@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+.sizeScreen {
+    @apply max-w-screen-sm mx-auto;
+}
+
+@screen sm {
+    .sizeScreen {
+        @apply max-w-screen-sm mx-auto;
+    }
+}
+
+@screen lg {
+    .sizeScreen {
+        @apply mx-auto max-w-screen-lg;
+    }
+}
+
+@screen xl {
+    .sizeScreen {
+        @apply mx-auto max-w-screen-xl;
+    }
+}
+
+@screen 2xl {
+    .sizeScreen {
+        @apply mx-auto max-w-screen-2xl;
+    }
+}
