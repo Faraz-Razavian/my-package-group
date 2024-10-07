@@ -1,7 +1,10 @@
 import React from "react";
 import GroupTrading from "@/views/package/group-trading/GroupTrading";
-import {GroupNameColOne} from "@/views/package/group-trading/setting/GroupNameColOne";
-import {GroupNameColTwo} from "@/views/package/group-trading/setting/GroupNameColTow";
+import {GroupNameColOne} from "@/views/package/group-trading/setting/groupName/GroupNameColOne";
+import {GroupNameColTwo} from "@/views/package/group-trading/setting/groupName/GroupNameColTow";
+import {Invitation} from "@/views/package/group-trading/setting/Invitation";
+import {MyPartnerList} from "@/views/package/group-trading/setting/MyPartnerList";
+import {Button} from "@/components/ui/button";
 
 
 const Setting: React.FC = () => {
@@ -18,7 +21,8 @@ const Setting: React.FC = () => {
 
                 </div>
             </div>
-            <div className="h-screen">hello</div>
+            <Invitation/>
+            <MyPartnerList/>
         </GroupTrading>
     );
 };

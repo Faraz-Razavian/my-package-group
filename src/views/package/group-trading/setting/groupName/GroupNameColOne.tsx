@@ -7,7 +7,6 @@ import {z} from "zod"
 import {Button} from "@/components/ui/button"
 import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage,} from "@/components/ui/form"
 import {Input} from "@/components/ui/input"
-import {useToast} from "@/hooks/use-toast";
 
 const FormSchema = z.object({
     groupName: z.string().min(2, {
@@ -16,7 +15,6 @@ const FormSchema = z.object({
 })
 
 export function GroupNameColOne() {
-    const {toast} = useToast()
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
@@ -25,14 +23,7 @@ export function GroupNameColOne() {
     })
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
-        toast({
-            title: "You submitted the following values:",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-            ),
-        })
+        console.log("payload", data)
     }
 
     return (

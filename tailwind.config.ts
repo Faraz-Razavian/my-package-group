@@ -15,9 +15,9 @@ module.exports = {
 			},
 			colors: {
 				mainBgColor: '#F4F4F5',
-				danger: '#ff0000',
+				danger: '#EF4444',
 				warning: '#ff8800',
-				success: '#4cb050',
+				success: '#34C759',
 				primaryColor: "#7C3AED",
 				secondaryColor: "var(--secondaryColor)",
 			},
