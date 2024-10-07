@@ -12,12 +12,12 @@ import {useRouter} from "next/router";
 
 const navItems = [
     {
-        title: "My Package",
-        src: "/package"
+        title: "My Profile",
+        src: "/profile"
     },
     {
         title: "My Package",
-        src: "/"
+        src: "/package"
     },
     {
         title: "My Wallet",
@@ -35,16 +35,17 @@ const navItems = [
 
 const Navbar: React.FC = () => {
     const router = useRouter()
+    const rootPath = `/${router.pathname?.split("/")?.[1]}`
 
     return (
-        <div className="w-full bg-gray-100 flex">
+        <div className="w-full flex px-10">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         {navItems.map((row, index) => {
                             const itemClassNames = classNames({
-                                "!bg-white !rounded-b-none !rounded-t-2xl !text-primaryColor": router.pathname === row.src,
-                                "!bg-transparent hover:!text-primaryColor": router.pathname !== row.src,
+                                "!bg-white !rounded-b-none !rounded-t-2xl !text-primaryColor": rootPath === row.src,
+                                "!bg-transparent hover:!text-primaryColor": rootPath !== row.src,
                                 [navigationMenuTriggerStyle()]: true
                             })
                             return (

@@ -14,7 +14,7 @@ module.exports = {
 				'2xl': '1440px',
 			},
 			colors: {
-				mainBgColor: '#1E1E1E',
+				mainBgColor: '#F4F4F5',
 				danger: '#ff0000',
 				warning: '#ff8800',
 				success: '#4cb050',

@@ -3,6 +3,10 @@
 @tailwind utilities;
 @tailwind variants;
 
+body {
+    @apply bg-mainBgColor;
+}
+
 .sizeScreen {
     @apply max-w-screen-sm mx-auto;
 }
