@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 import info from "@/asset/images/info.svg";
 import React from "react";
 import {MembersFrom} from "@/views/package/group-trading/setting/MembersFrom";
@@ -7,7 +7,22 @@ import avatarImageMem4 from "@/asset/images/AvatarImageMem4.svg"
 import avatarImageMem5 from "@/asset/images/AvatarImageMem5.svg"
 import {Button} from "@/components/ui/button";
 
-const data = [
+interface MemberData {
+    label: string;
+    isDelete?: boolean;
+    isConfirm?: boolean;
+    defaultValues: {
+        email: string;
+        username: string;
+    };
+    img: StaticImageData;
+    showStatusBtn: {
+        title: string;
+        className: string;
+    };
+}
+
+const data: MemberData[] = [
     {
         label: "Member 3",
         isDelete: true,
@@ -15,7 +30,11 @@ const data = [
             email: "isabella.nguyen@email.com",
             username: "Isabella Nguyen"
         },
-        img: avatarImageMem3
+        img: avatarImageMem3,
+        showStatusBtn: {
+            title: "shared Wallet",
+            className: "!text-primaryColor !border !border-primaryColor !bg-white !w-1/6"
+        }
     },
     {
         label: "Member 4",
@@ -24,7 +43,11 @@ const data = [
             email: "will@email.com",
             username: "William Kim"
         },
-        img: avatarImageMem4
+        img: avatarImageMem4,
+        showStatusBtn: {
+            title: "Unshared Wallet",
+            className: "!bg-transparent !w-1/6"
+        }
     },
     {
         label: "Member 5",
@@ -33,7 +56,11 @@ const data = [
             email: "sofia.davis@email.com",
             username: "William Kim"
         },
-        img: avatarImageMem5
+        img: avatarImageMem5,
+        showStatusBtn: {
+            title: "Reject",
+            className: "!bg-gray-200 !w-max !w-1/6"
+        }
     },
 ]
 

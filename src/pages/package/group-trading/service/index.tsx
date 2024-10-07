@@ -1,10 +1,13 @@
 import Layouts from "@/layouts/Layouts";
 import Service from "@/views/package/group-trading/service/Service";
+import React from "react";
 
-export default function ServiceIndex() {
+const ServiceIndex: React.FC = () => {
     return (
         <Layouts>
             <Service/>
         </Layouts>
-    )
-}
+    );
+};
+
+export default ServiceIndex;

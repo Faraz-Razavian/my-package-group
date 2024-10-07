@@ -6,7 +6,9 @@ import notification from "@/asset/images/notification.svg";
 import search from "@/asset/images/search.svg";
 import Navbar from "@/layouts/header/Navbar";
 
-function Header() {
+type HeaderProps = {};
+
+const Header: React.FC<HeaderProps> = () => {
     return (
         <>
             <div

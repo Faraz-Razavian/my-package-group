@@ -1,8 +1,8 @@
-import Layouts from "@/layouts/Layouts";
 import React from "react";
+import Layouts from "@/layouts/Layouts";
 import MyPackageNavbar from "@/views/package/MyPackageNavbar";
 
-export default function PackageIndex() {
+const PackageIndex: React.FC = () => {
     return (
         <Layouts>
             <MyPackageNavbar/>
@@ -12,5 +12,7 @@ export default function PackageIndex() {
                 </div>
             </div>
         </Layouts>
-    )
-}
+    );
+};
+
+export default PackageIndex;

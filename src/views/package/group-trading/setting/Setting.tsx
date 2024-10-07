@@ -18,7 +18,6 @@ const Setting: React.FC = () => {
                     <div className="w-1/2">
                         <GroupNameColTwo/>
                     </div>
-
                 </div>
             </div>
             <Invitation/>

@@ -8,30 +8,36 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import classNames from "classnames";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import SettingIcon from "@/asset/icons/SettingIcon";
 import TurnoverIcon from "@/asset/icons/TurnoverIcon";
 import ServiceIcon from "@/asset/icons/ServiceIcon";
 
-const navItems = [
+interface NavItem {
+    title: string;
+    src: string;
+    icon: ReactNode;
+}
+
+const navItems: NavItem[] = [
     {
         title: "Service",
         src: "/package/group-trading/service",
-        icon: <ServiceIcon/>
+        icon: <ServiceIcon />
     },
     {
         title: "Setting",
         src: "/package/group-trading/setting",
-        icon: <SettingIcon/>
+        icon: <SettingIcon />
     },
     {
         title: "Turnover",
         src: "/package/group-trading/turnover",
-        icon: <TurnoverIcon/>
+        icon: <TurnoverIcon />
     }
 ];
 
-const GroupTradingNavbar: React.FC = ({children}) => {
+const GroupTradingNavbar: React.FC = () => {
     const router = useRouter();
 
     return (
@@ -62,7 +68,6 @@ const GroupTradingNavbar: React.FC = ({children}) => {
                     </NavigationMenuList>
                 </NavigationMenu>
             </div>
-            {children}
         </div>
     );
 };

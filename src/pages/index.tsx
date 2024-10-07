@@ -1,7 +1,7 @@
-import Layouts from "@/layouts/Layouts";
 import React from "react";
+import Layouts from "@/layouts/Layouts";
 
-export default function Home() {
+const Home: React.FC = () => {
     return (
         <Layouts>
             <div className="h-screen flex justify-center items-center">
@@ -10,5 +10,7 @@ export default function Home() {
                 </div>
             </div>
         </Layouts>
-    )
-}
+    );
+};
+
+export default Home;

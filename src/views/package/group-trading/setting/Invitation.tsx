@@ -3,7 +3,17 @@ import info from "@/asset/images/info.svg";
 import React from "react";
 import {MembersFrom} from "@/views/package/group-trading/setting/MembersFrom";
 
-const data = [
+interface MemberData {
+    label: string;
+    isEdit?: boolean;
+    isRequest?: boolean;
+    defaultValues: {
+        email: string;
+        username: string;
+    };
+}
+
+const data: MemberData[] = [
     {
         label: "Member 1",
         isEdit: true,
@@ -19,8 +29,9 @@ const data = [
             email: "jackson.lee@email.com",
             username: "Jackson Lee"
         }
-    },
+    }
 ]
+
 
 export function Invitation() {
 

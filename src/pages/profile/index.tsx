@@ -1,10 +1,13 @@
 import Layouts from "@/layouts/Layouts";
 import Profile from "@/views/profile/Profile";
+import React from "react";
 
-export default function ProfileIndex() {
+const ProfileIndex: React.FC = () => {
     return (
         <Layouts>
             <Profile/>
         </Layouts>
-    )
-}
+    );
+};
+
+export default ProfileIndex;

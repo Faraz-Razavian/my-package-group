@@ -1,11 +1,13 @@
+import React from "react";
 import Layouts from "@/layouts/Layouts";
-import MyPackageNavbar from "@/views/package/MyPackageNavbar";
 import LiveTrade from "@/views/package/live-trade/LiveTrade";
 
-export default function LiveTradeIndex() {
+const LiveTradeIndex: React.FC = () => {
     return (
         <Layouts>
-                <LiveTrade/>
+            <LiveTrade/>
         </Layouts>
-    )
-}
+    );
+};
+
+export default LiveTradeIndex;

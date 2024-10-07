@@ -1,10 +1,13 @@
 import Layouts from "@/layouts/Layouts";
 import Notification from "@/views/notification/Notification";
+import React from "react";
 
-export default function NotificationIndex() {
+const NotificationIndex: React.FC = () => {
     return (
         <Layouts>
             <Notification/>
         </Layouts>
-    )
-}
+    );
+};
+
+export default NotificationIndex;

@@ -1,10 +1,13 @@
 import Layouts from "@/layouts/Layouts";
 import Affiliate from "@/views/affiliate/Notification";
+import React from "react";
 
-export default function affiliateIndex() {
+const AffiliateIndex: React.FC = () => {
     return (
         <Layouts>
             <Affiliate/>
         </Layouts>
-    )
-}
+    );
+};
+
+export default AffiliateIndex;
